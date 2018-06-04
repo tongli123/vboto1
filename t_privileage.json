@@ -1,0 +1,9 @@
+{"_id":{"$oid":"5b14a4e0a95f993a07f456a8"},"name":"界面管理","code":1,"parentid":0,"type":0,"statue":0,"isdel":0}
+{"_id":{"$oid":"5b14ded0d05b3628d084868f"},"name":"日志管理","code":0,"parentid":0,"type":1,"statue":0,"isdel":0}
+{"_id":{"$oid":"5b14df74d05b3628d08486ac"},"name":"导航栏","code":1,"parentid":1,"type":0,"statue":0,"isdel":0}
+{"_id":{"$oid":"5b14df85d05b3628d08486ae"},"name":"文章","code":1,"parentid":1,"type":0,"statue":0,"isdel":0}
+{"_id":{"$oid":"5b14dfded05b3628d08486c1"},"name":"图片","code":1,"parentid":1,"type":0,"statue":0,"isdel":0}
+{"_id":{"$oid":"5b14e021d05b3628d08486c7"},"name":"反馈","code":1,"parentid":1,"type":0,"statue":0,"isdel":0}
+{"_id":{"$oid":"5b14e06fd05b3628d08486cf"},"name":"查看日志","code":1,"parentid":1,"type":1,"statue":0,"isdel":0}
+{"_id":{"$oid":"5b14e0ccd05b3628d08486e1"},"name":"增加日志","code":1,"parentid":1,"type":1,"statue":0,"isdel":0}
+{"_id":{"$oid":"5b14e0ebd05b3628d08486e3"},"name":"删除日志","code":1,"parentid":1,"type":1,"statue":0,"isdel":0}
