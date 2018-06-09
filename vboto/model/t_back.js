@@ -6,6 +6,6 @@ var BackSchema = new mongoose.Schema({
     content: String,
     ip:String,
     addtime: Date,
-    staue: Boolean
+    statue: Number
 });
 module.exports = mongoose.model('back', BackSchema,'t_back');

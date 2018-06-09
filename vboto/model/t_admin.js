@@ -4,7 +4,8 @@ var AdminSchema = new mongoose.Schema({
     account: String,
     passwd: String,
     addtime: Date,
-    staue: Boolean,
-    isdel: Boolean
+    staue: Number,
+    isdel: Number,
+    code: Number
 });
 module.exports = mongoose.model('admin', AdminSchema,'t_admin');
