@@ -2,12 +2,12 @@ var mongoose = require('mongoose');
 
 var MenuSchema = new mongoose.Schema({
     name: String,
-    parentedid: Number,
+    parentid: Number,
     adduser:String,
     addtime: Date,
     updateuser: String,
     updatetime: Date,
-    staue: Boolean,
-    isdel:Boolean
-});
+    statue:Number,
+    isdel:Number
+},{versionKey: false});
 module.exports = mongoose.model('menu', MenuSchema,'t_menu');

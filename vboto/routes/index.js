@@ -10,33 +10,32 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
 
+
+
+
 //登录
-router.use('/login/account',function(req, res, next) {
+router.post('/login/account',function(req, res, next) {
+    // const { username,password } = req.body;
+    // console.log(req.body.username);
+    // console.log(req.body.password);
     const { password, userName, type } = req.body;
     admin.findOne({ account:req.body.userName,passwd:req.body.password },function (err, doc) {
         if(doc){
-            admin.findOne({ account:req.body.userName,passwd:req.body.password ,code:0},function (err1, doc1) {
-                if (doc1) {
-                    res.send({
-                        status: 'ok',
-                        type,
-                        currentAuthority: 'admin',
-                    });
-                    return;
-                }else{
-                    res.send({
-                        status: 'ok',
-                        type,
-                        currentAuthority: 'user',
-                    });
-                    return;
-                }
+            // req.session.sign=true;
+            // req.session.name = req.body.username;
+           // res.send("成功");
+            res.send({
+                status: 'ok',
+                type,
+                currentAuthority: 'admin',
             });
+            return;
         }else{
+            //res.send("失败");
             res.send({
                 status: 'error',
                 type,
-                currentAuthority: 'guest'
+                currentAuthority: 'guest',
             });
         }
     });
@@ -54,24 +53,23 @@ router.use('/login/account',function(req, res, next) {
 // });
 
 
-//留言
-router.use('/leavemessage',function(req, res, next) {
-    const mineData = [];
-    back.find({}, function (err, comment) {
-        const mineData = comment;
-        console.log(mineData);
-         res.send(mineData);
-    });
-});
 
-
+//日志
 router.use('/log',function(req, res, next) {
-    const mineData = [];
     logs.find({}, function (err, comment) {
-        console.log(comment);
         const mineData = comment;
         res.send(mineData);
     });
 });
+
+//获取账号
+router.use('/accountmanage/show',function(req, res, next) {
+    const mineData = [];
+    admin.find({}, function (err, comment) {
+        const mineData = comment;
+        res.send(mineData);
+    });
+});
+
 
 module.exports = router;

@@ -3,13 +3,13 @@ var mongoose = require('mongoose');
 var ImageSchema = new mongoose.Schema({
     name: String,
     path: String,
-    type: Boolean,
-    sort: Boolean,
+    type: Number,
+    sort: Number,
     adduser:String,
     addtime: Date,
     updateuser: String,
     updatetime: Date,
-    staue: Boolean,
-    isdel:Boolean
-});
+    statue:Number,
+    isdel:Number
+},{versionKey: false});
 module.exports = mongoose.model('image', ImageSchema,'t_image');

@@ -5,12 +5,12 @@ var AriSchema = new mongoose.Schema({
     imageid: Object,
     content: String,
     publishtime: Date,
-    type: Boolean,
+    type: Number,
     adduser:String,
     addtime: Date,
     updateuser: String,
     updatetime: Date,
-    staue: Boolean,
-    isdel:Boolean
+    staue: Number,
+    isdel:Number
 });
 module.exports = mongoose.model('ari', AriSchema,'t_ari');
